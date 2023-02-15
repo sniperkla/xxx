@@ -3,8 +3,8 @@ import axios from 'axios'
 export const FirstPage = () => {
   const [enter, notenter] = useState(false)
   const [datax, Setdata] = useState([])
-  console.log('hello')
 
+  console.log(datax)
   useEffect(() => {
     axios({
       method: 'get',
@@ -14,14 +14,14 @@ export const FirstPage = () => {
       url: 'https://adultvideosapi.com/api/videos/get-all'
     })
       .then((response) => {
-        Setdata(response.data);
-        setLoading(false);
+        Setdata(response.data)
+        setLoading(false)
       })
       .catch((error) => {
-        setError(error);
-        setLoading(false);
-      });
-  }, []);
+        setError(error)
+        setLoading(false)
+      })
+  }, [])
   return (
     <div
       onMouseEnter={() => {
