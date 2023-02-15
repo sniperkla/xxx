@@ -3,13 +3,14 @@ import axios from 'axios'
 export const FirstPage = () => {
   const [enter, notenter] = useState(false)
   const [datax, Setdata] = useState([])
-
+  const API_KEY = 'Em8Byk3UYix4fUltnFd4xTfb6mkoVBspyp'
   console.log(datax)
   useEffect(() => {
     axios
       .get('https://adultvideosapi.com/api/videos/get-all', {
         headers: {
-          'x-api-key': 'Em8Byk3UYix4fUltnFd4xTfb6mkoVBspyp'
+          'Content-Type': 'application/json',
+          'X-API-Key': API_KEY
         }
       })
       .then((response) => {
