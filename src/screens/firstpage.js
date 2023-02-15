@@ -6,23 +6,22 @@ export const FirstPage = () => {
   console.log('hello')
 
   useEffect(() => {
-    const getxxx = async () => {
-      await axios({
-        method: 'get',
-        headers: {
-          'X-API-Key': 'Em8Byk3UYix4fUltnFd4xTfb6mkoVBsp'
-        },
-        url: 'https://adultvideosapi.com/api/videos/get-all'
+    axios({
+      method: 'get',
+      headers: {
+        'X-API-Key': 'Em8Byk3UYix4fUltnFd4xTfb6mkoVBsp'
+      },
+      url: 'https://adultvideosapi.com/api/videos/get-all'
+    })
+      .then((response) => {
+        Setdata(response.data);
+        setLoading(false);
       })
-        .then((response) => {
-          Setdata(response.data)
-        })
-        .catch((error) => {
-          Setdata(error)
-        })
-    }
-    getxxx()
-  }, [])
+      .catch((error) => {
+        setError(error);
+        setLoading(false);
+      });
+  }, []);
   return (
     <div
       onMouseEnter={() => {
