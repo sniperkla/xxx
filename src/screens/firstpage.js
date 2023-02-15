@@ -3,7 +3,7 @@ import axios from 'axios'
 export const FirstPage = () => {
   const [enter, notenter] = useState(false)
   const [datax, Setdata] = useState([])
-  console.log(datax)
+  console.log('hello')
 
   useEffect(() => {
     const getxxx = async () => {
@@ -36,7 +36,7 @@ export const FirstPage = () => {
       }  w-[50%] h-[70%] bg-green-500`}
     >
       <a className="mt-10 font-bold text-white grid grid-cols-1 place-items-center">
-        show here
+        hello world
       </a>
       <div
         className="grid grid-cols-1 place-items-center absolute inset-x-0  top-[15%]
