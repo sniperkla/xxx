@@ -10,7 +10,7 @@ export const FirstPage = () => {
   headers: {
     'x-api-key': 'Em8Byk3UYix4fUltnFd4xTfb6mkoVBspyp'
   }
-  
+}
       .then((response) => {
         Setdata(response.data)
         setLoading(false)
