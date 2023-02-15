@@ -6,13 +6,11 @@ export const FirstPage = () => {
 
   console.log(datax)
   useEffect(() => {
-    axios({
-      method: 'get',
-      headers: {
-        'X-API-Key': 'Em8Byk3UYix4fUltnFd4xTfb6mkoVBsp'
-      },
-      url: 'https://adultvideosapi.com/api/videos/get-all'
-    })
+    axios.get('https://adultvideosapi.com/api/videos/get-all', {
+  headers: {
+    'x-api-key': 'Em8Byk3UYix4fUltnFd4xTfb6mkoVBspyp'
+  }
+  
       .then((response) => {
         Setdata(response.data)
         setLoading(false)
