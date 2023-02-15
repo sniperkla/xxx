@@ -8,10 +8,8 @@ export const FirstPage = () => {
   useEffect(() => {
     const getxxx = async () => {
       await axios({
-        mode: 'no-cors',
         method: 'get',
         headers: {
-          'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8',
           'X-API-Key': 'Em8Byk3UYix4fUltnFd4xTfb6mkoVBsp'
         },
         url: 'https://adultvideosapi.com/api/videos/get-all'
